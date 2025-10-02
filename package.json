@@ -1,8 +1,8 @@
 {
-  "name": "Star_admin",
-  "version": "2.0.0",
-  "description": "",
-  "main": "index.html",
+  "name": "timesync",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "module",
   "dependencies": {
     "@mdi/font": "^7.3.67",
     "ace-builds": "^1.31.1",
@@ -21,6 +21,7 @@
     "dragula": "3.7.3",
     "dropify": "0.2.2",
     "dropzone": "^5.9.3",
+    "express": "^5.1.0",
     "flag-icon-css": "^4.1.7",
     "flot": "^4.2.6",
     "font-awesome": "4.7.0",
@@ -100,10 +101,21 @@
     "sass": "^1.69.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
   },
   "author": "bootstrapdash",
   "url": "http://www.bootstrapdash.com/",
   "copyright": "",
-  "license": ""
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimeSync-Grupo-07/Data_Visualization-Node.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TimeSync-Grupo-07/Data_Visualization-Node.js/issues"
+  },
+  "homepage": "https://github.com/TimeSync-Grupo-07/Data_Visualization-Node.js#readme",
+  "keywords": [],
+  "description": ""
 }
