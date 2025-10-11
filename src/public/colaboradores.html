@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Time Sync - Colaboradores </title>
+  <title>Time Sync - Equipes </title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="assets/vendors/feather/feather.css">
   <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
@@ -23,7 +23,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="assets/images/favicon.png" />  
+  <link rel="shortcut icon" href="assets/images/favicon.png" />
 </head>
 
 <body class="with-welcome-text">
@@ -58,14 +58,14 @@
 
           <li class="nav-item">
             <div class="d-sm-flex align-items-center justify-content-center">
-              <a class="navbar-brand brand-logo" href="index.html">
+              <a class="navbar-brand brand-logo">
                 <img img class="img-md rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image" />
               </a>
             </div>
           </li>
           <li class="nav-item">
             <div class="d-sm-flex align-items-center justify-content-center">
-              <a class="nav-link" data-bs-toggle="collapse" href="index.html" aria-expanded="false"
+              <a class="nav-link" data-bs-toggle="collapse"  aria-expanded="false"
                 aria-controls="form-elements">
                 <span class="menu-title">Fulano</span>
               </a>
@@ -90,22 +90,23 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link"  href="./colaboradores.html">
+            <a class="nav-link" data-bs-toggle="collapse"  href="./colaboradores.html" aria-expanded="false"
+              aria-controls="form-elements"
+              >
               <i class="menu-icon mdi mdi-account-circle-outline"></i>
               <span class="menu-title">Colaboradores</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="./equipes.html" aria-expanded="false"
-              aria-controls="form-elements">
+            <a class="nav-link" href="./equipes.html" >
               <i class="menu-icon mdi mdi-account-group-outline"></i>
               <span class="menu-title">Equipes</span>
             </a>
-
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="./sair.html" aria-expanded="false"
+            <a class="nav-link" data-bs-toggle="collapse" href="pages/icons/font-awesome.html" aria-expanded="false"
               aria-controls="form-elements">
               <i class="mdi mdi-grid-large menu-icon"></i>
               <span class="menu-title">Sair</span>
@@ -113,217 +114,62 @@
           </li>
         </ul>
       </nav>
- 
-  <div class="content-wrapper">
-    <div class="row">
-      <div class="col-12 mb-4">
-      </div>
-    </div>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12">
 
-    <div class="row">
-      <!-- Tabela de Categorias -->
-      <div class="col-lg-4 grid-margin stretch-card">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Categorias</h4>
-            <p class="card-description text-muted mb-4">
-              Custo de hora de trabalho por categoria
-            </p>
-            <div class="table-responsive">
-              <table class="table table-bordered text-center">
-                <thead class="table-light">
-                  <tr>
-                    <th>Categoria</th>
-                    <th>Custo de Hora</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Estagiário</td><td>R$30,00</td></tr>
-                  <tr><td>Júnior</td><td>R$45,00</td></tr>
-                  <tr><td>Pleno</td><td>R$60,00</td></tr>
-                  <tr><td>Sênior</td><td>R$75,00</td></tr>
-                  <tr><td>Gestor</td><td>R$100,00</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="mt-4 text-center">
-              <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#addProjectModal" style="margin: 0.5rem 0.5rem 0.5rem 0.5rem;">Adicionar Projeto</button>
-              <div></div>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addColaboradorModal">Adicionar Colaborador</button>
+
+
+
+
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Tabela de Projetos -->
-      <div class="col-lg-8 grid-margin stretch-card">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Projetos Ativos</h4>
-            <p class="card-description text-muted mb-4">
-              Resumo dos projetos em andamento
-            </p>
-            <div class="table-responsive">
-              <table class="table table-hover text-center">
-                <thead class="table-light">
-                  <tr>
-                    <th>Projeto</th>
-                    <th>Custo Estimado</th>
-                    <th>Horas Planejadas</th>
-                    <th>Data de Entrega</th>
-                    <th>Data de Início</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Projeto 1</td><td>R$430.000</td><td>130H</td><td>26/12</td><td>30/09</td></tr>
-                  <tr><td>Projeto 2</td><td>R$430.000</td><td>130H</td><td>26/12</td><td>30/09</td></tr>
-                  <tr><td>Projeto 3</td><td>R$430.000</td><td>130H</td><td>26/12</td><td>30/09</td></tr>
-                  <tr><td>Projeto 4</td><td>R$430.000</td><td>130H</td><td>26/12</td><td>30/09</td></tr>
-                  <tr><td>Projeto 5</td><td>R$430.000</td><td>130H</td><td>26/12</td><td>30/09</td></tr>
-                </tbody>
-              </table>
-            </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a
+                href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from
+              BootstrapDash.</span>
+            <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Copyright © 2023. All rights
+              reserved.</span>
           </div>
-        </div>
+        </footer>
+        <!-- partial -->
       </div>
+      <!-- main-panel ends -->
     </div>
+    <!-- page-body-wrapper ends -->
   </div>
 
-<!-- Modal para Adicionar Projeto -->
-<div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="addProjectModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addProjectModalLabel">Adicionar Novo Projeto</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="ticketProjeto" class="form-label">Ticket Projeto</label>
-              <input type="text" class="form-control" id="ticketProjeto">
-            </div>
-            <div class="col-md-6">
-              <label for="dataEntrega" class="form-label">Data de entrega</label>
-              <input type="date" class="form-control" id="dataEntrega">
-            </div>
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="margemLucro" class="form-label">Margem de lucro</label>
-              <input type="text" class="form-control" id="margemLucro" placeholder="%">
-            </div>
-          </div>
-
-          <!-- 🔹 Tabela com Nome e Horas Planejadas -->
-          <div class="table-responsive mt-3">
-            <label class="form-label fw-bold mb-2">Planejamento de Equipe</label>
-            <table class="table table-bordered text-center">
-              <thead class="table-light">
-                <tr>
-                  <th>Nome</th>
-                  <th>Horas Planejadas</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="text" class="form-control" placeholder="Nome do colaborador"></td>
-                  <td><input type="number" class="form-control" placeholder="Horas"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
-  <!-- Modal para Adicionar Colaborador -->
-<div class="modal fade" id="addColaboradorModal" tabindex="-1" aria-labelledby="addColaboradorModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addColaboradorModalLabel">Adicionar Colaborador</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="nomeColaborador" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="nomeColaborador">
-          </div>
-          <div class="mb-3">
-            <label for="emailColaborador" class="form-label">E-Mail</label>
-            <input type="email" class="form-control" id="emailColaborador">
-          </div>
-          <div class="mb-3">
-            <label for="matriculaColaborador" class="form-label">Matrícula</label>
-            <input type="text" class="form-control" id="matriculaColaborador">
-          </div>
-          <div class="mb-3">
-            <label for="cargoColaborador" class="form-label">Cargo</label>
-            <select class="form-control" id="cargoColaborador">
-              <option selected>Selecione o cargo</option>
-              <option value="estagiario">Estagiário</option>
-              <option value="junior">Júnior</option>
-              <option value="pleno">Pleno</option>
-              <option value="senior">Sênior</option>
-              <option value="gestor">Gestor</option>
-            </select>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Scripts na ORDEM CORRETA -->
+  <!-- container-scroller -->
+  <!-- plugins:js -->
   <script src="assets/vendors/js/vendor.bundle.base.js"></script>
   <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="assets/vendors/chart.js/chart.umd.js"></script>
+  <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
   <script src="assets/js/off-canvas.js"></script>
-  <script src="assets/js/hoverable-collapse.js"></script>
   <script src="assets/js/template.js"></script>
   <script src="assets/js/settings.js"></script>
+  <script src="assets/js/hoverable-collapse.js"></script>
   <script src="assets/js/todolist.js"></script>
-  <script src="assets/js/jquery.cookie.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
   <script src="assets/js/dashboard.js"></script>
+  <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
+  <!-- End custom js for this page-->
 
-  <script>
-    // Teste simples para verificar se os modais funcionam
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('DOM carregado - modais devem funcionar agora');
-    });
-
-    function AdicionarProjeto() {
-      
-      let modal = document.getElementById('addProjectModal');
-
-      modal.style.display = 'block';
-
-    }
-
-    function AdicionarColaborador() {
-      
-      let modal = document.getElementById('addColaboradorModal');
-
-      modal.style.display = 'block';
-
-    }
-
-  </script>
+  <script src="assets/js/"></script>
 </body>
+
 </html>
