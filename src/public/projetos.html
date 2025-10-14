@@ -83,14 +83,14 @@
           <li class="nav-item nav-category">Específicos</li>
 
           <li class="nav-item">
-            <a class="nav-link" href="./projetos.html" >
+            <a class="nav-link" href="./projetos.html">
               <i class="menu-icon mdi mdi-file-document"></i>
               <span class="menu-title">Projetos</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="./colaboradores.html" aria-expanded="false"
+            <a class="nav-link" data-bs-toggle="collapse" href="../public/colaboradores.html" aria-expanded="false"
               aria-controls="form-elements">
               <i class="menu-icon mdi mdi-account-circle-outline"></i>
               <span class="menu-title">Colaboradores</span>
@@ -106,8 +106,7 @@
 
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="" aria-expanded="false"
-              aria-controls="form-elements">
+            <a class="nav-link" data-bs-toggle="collapse" href="" aria-expanded="false" aria-controls="form-elements">
               <i class="mdi mdi-grid-large menu-icon"></i>
               <span class="menu-title">Sair</span>
             </a>
@@ -156,6 +155,82 @@
                 </div>
                 <div class="tab-content tab-content-basic">
                   <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+                    <div class="row flex-grow">
+                      <div class="col-6 grid-margin stretch-card">
+                        <div class="card card-rounded">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div>
+                                  <h4 class="card-title card-title-dash" style="margin-bottom: 1rem;">Resumo
+                                    Financeiro e Cronograma</h4>
+                                </div>
+                                <div class="statistics-details d-flex justify-content-evenly">
+                                  <div class="d-none d-md-block">
+                                    <p class="statistics-title">Inicio</p>
+                                    <h3 class="rate-percentage">XX/XX/XXXX</h3>
+                                  </div>
+                                  <div>
+                                    <p class="statistics-title"> Prazo de Entrega</p>
+                                    <h3 class="rate-percentage">X Dias</h3>
+                                  </div>
+                                  <div>
+                                    <p class="statistics-title">Custo Estimado Laboral</p>
+                                    <h3 class="rate-percentage">R$ XXXX,XX</h3>
+                                  </div>
+                                  <div>
+                                    <p class="statistics-title">Custo Real Laboral</p>
+                                    <h3 class="rate-percentage">R$ XXXX,XX</h3>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 grid-margin">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row">
+
+                              <div class="tab-pane fade show active" id="overview" role="tabpanel"
+                                aria-labelledby="overview">
+                                <div>
+                                  <h4 class="card-title card-title-dash" style="margin-bottom: 1rem;">Controle de
+                                    Horas
+                                  </h4>
+                                </div>
+                                <div class="statistics-details d-flex justify-content-evenly">
+                                  <div style="margin-bottom: 1rem;">
+                                    <p class="statistics-title">Horas Planejadas
+                                    </p>
+                                    <h3 class="rate-percentage">XXXX Horas</h3>
+                                  
+                                  </div>
+                                  <div style="margin-bottom: 1rem;">
+                                    <p class="statistics-title">Horas Apontadas</p>
+                                    <h3 class="rate-percentage">XXX Horas</h3>
+                                  
+                                  </div>
+                                  <div style="margin-bottom: 1rem;">
+                                    <p class="statistics-title">Horas Extras Totais</p>
+                                    <h3 class="rate-percentage">X Horas</h3>
+                                   
+                                  </div>
+                                  <div>
+                                    <p class="statistics-title">Horas Retroativas</p>
+                                    <h3 class="rate-percentage">X</h3>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
                     <div class="row">
                       <div class="col-lg-5 d-flex flex-column">
                         <div class="row flex-grow">
@@ -164,7 +239,7 @@
                               <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-start">
                                   <div>
-                                    <h4 class="card-title card-title-dash">Distribuição de Esforço</h4>
+                                    <h4 class="card-title card-title-dash">Distribuição de Esforço do Staff</h4>
                                     <p class="card-subtitle card-subtitle-dash">Lorem ipsum dolor sit amet consectetur
                                       adipisicing elit</p>
                                   </div>
@@ -188,7 +263,7 @@
                                   </div>
                                 </div>
                                 <div class="chartjs-bar-wrapper mt-2">
-                                  <canvas id="marketingOverview" style="height: 32rem;"></canvas>
+                                  <canvas id="marketingOverview" style="height: 20rem;"></canvas>
                                 </div>
                               </div>
                             </div>
@@ -196,62 +271,19 @@
                         </div>
                       </div>
                       <div class="col-lg-7 d-flex flex-column">
-                        <div class="row flex-grow">
-                          <div class="col-12 grid-margin stretch-card">
-                            <div class="card card-rounded">
-                              <div class="card-body">
-                                <div class="row">
-                                  <div class="col-sm-12">
-                                    <div>
-                                      <h4 class="card-title card-title-dash" style="margin-bottom: 1rem;">Resumo Financeiro e Cronograma</h4>
-                                    </div>
-                                    <div class="statistics-details d-flex align-items-center justify-content-between">
-                                      <div>
-                                        <p class="statistics-title">Custo Estimado Laboral</p>
-                                        <h3 class="rate-percentage">X</h3>
-                                        <p class="text-danger d-flex"><i
-                                            class="mdi mdi-menu-down"></i><span>-0.5%</span></p>
-                                      </div>
-                                      <div>
-                                        <p class="statistics-title">Custo Real Laboral</p>
-                                        <h3 class="rate-percentage">X</h3>
-                                        <p class="text-success d-flex"><i class="mdi mdi-menu-up"></i><span>+0.1%</span>
-                                        </p>
-                                      </div>
-                                      <div>
-                                        <p class="statistics-title">Prazo de Entrega</p>
-                                        <h3 class="rate-percentage">X</h3>
-                                        <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span>
-                                        </p>
-                                      </div>
-                                      <div class="d-none d-md-block">
-                                        <p class="statistics-title">Inicio</p>
-                                        <h3 class="rate-percentage">X</h3>
-                                        <p class="text-success d-flex"><i
-                                            class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                         <div class="row">
-                          <div class="col-lg-8 grid-margin stretch-card">
+                          <div class="col-lg-12 grid-margin">
                             <div class="card">
                               <div class="card-body">
-                                <h4 class="card-title">Basic Table</h4>
-                                <p class="card-description"> Add class <code>.table</code>
-                                </p>
+                                <h4 class="card-title card-title-dash">Colaboradores Alocados no Projeto</h4>
                                 <div class="table-responsive">
                                   <table class="table">
                                     <thead>
                                       <tr>
                                         <th>Colaborador</th>
-                                        <th>Índice de cumprimento de jornada</th>
-                                        <th>Índice de excedente de jornada</th>
-                                        <th>Taxa de erro de apontamento</th>
+                                        <th>Índice de <br> cumprimento <br> de jornada</th>
+                                        <th>Índice de <br> excedente <br> de jornada</th>
+                                        <th>Taxa de erro <br> de apontamento</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -279,7 +311,12 @@
                                         <td>16 May 2017</td>
                                         <td><label class="badge badge-success">Completed</label></td>
                                       </tr>
-
+                                      <tr>
+                                        <td>Jacob</td>
+                                        <td>53275531</td>
+                                        <td>12 May 2017</td>
+                                        <td><label class="badge badge-danger">Pending</label></td>
+                                      </tr>
                                     </tbody>
                                   </table>
                                 </div>
@@ -287,53 +324,7 @@
                             </div>
                           </div>
 
-                          <div class="col-lg-4 grid-margin stretch-card">
-                            <div class="card">
-                              <div class="card-body">
-                                <div class="row" style="align-items: center;">
-               
-                                    <div class="tab-pane fade show active" id="overview" role="tabpanel"
-                                      aria-labelledby="overview">
-                                      <div
-                                        class="statistics-details text-center d-flex flex-column align-items-center justify-content-center">
-                                        <div>
-                                          <h4 class="card-title card-title-dash" style="margin-bottom: 1rem;">Controle de Horas</h4>
-                                        </div>
-                                        <div style="margin-bottom: 1rem;" >
-                                          <p class="statistics-title">Horas Planejadas
-                                          </p>
-                                          <h3 class="rate-percentage">X Horas</h3>
-                                          <p class="text-danger d-flex"><i
-                                              class="mdi mdi-menu-down"></i><span>-0.5%</span></p>
-                                        </div>
-                                        <div style="margin-bottom: 1rem;">
-                                          <p class="statistics-title">Horas Apontadas</p>
-                                          <h3 class="rate-percentage">X Horas</h3>
-                                          <p class="text-success d-flex"><i
-                                              class="mdi mdi-menu-up"></i><span>+0.1%</span>
-                                          </p>
-                                        </div>
-                                        <div style="margin-bottom: 1rem;">
-                                          <p class="statistics-title">Horas Extras Totais</p>
-                                          <h3 class="rate-percentage">X Horas</h3>
-                                          <p class="text-danger d-flex"><i
-                                              class="mdi mdi-menu-down"></i><span>68.8</span>
-                                          </p>
-                                        </div>
-                                        <div class="d-none d-md-block">
-                                          <p class="statistics-title">Horas Retroativas</p>
-                                          <h3 class="rate-percentage">X Horas</h3>
-                                          <p class="text-success d-flex"><i
-                                              class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
-                                        </div>
 
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                        
                         </div>
                       </div>
                     </div>

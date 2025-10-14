@@ -177,110 +177,78 @@
       });
     }
 
-    if ($("#marketingOverview").length) { 
-      const marketingOverviewCanvas = document.getElementById('marketingOverview');
-      new Chart(marketingOverviewCanvas, {
-        type: 'bar',
-        data: {
-          labels: ["JAN","FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
-          datasets: [{
-            label: 'Last week',
-            data: [110, 220, 200, 190, 220, 110, 210, 110, 205, 202, 201, 150],
-            backgroundColor: "#52CDFF",
-            borderColor: [
-                '#52CDFF',
-            ],
-              borderWidth: 0,
-              barPercentage: 0.35,
-              fill: true, // 3: no fill
-              
-          },{
-            label: 'This week',
-            data: [215, 290, 210, 250, 290, 230, 290, 210, 280, 220, 190, 300],
-            backgroundColor: "#1F3BB3",
-            borderColor: [
-                '#1F3BB3',
-            ],
-            borderWidth: 0,
-              barPercentage: 0.35,
-              fill: true, // 3: no fill
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          elements: {
-            line: {
-                tension: 0.4,
-            }
-        },
-        
-          scales: {
-            y: {
-              border: {
-                display: false
-              },
-              grid: {
-                display: true,
-                drawTicks: false,
-                color:"#F0F0F0",
-                zeroLineColor: '#F0F0F0',
-              },
-              ticks: {
-                beginAtZero: false,
-                autoSkip: true,
-                maxTicksLimit: 4,
-                color:"#6B778C",
-                font: {
-                  size: 10,
-                }
-              }
+if ($("#marketingOverview").length) { 
+  const marketingOverviewCanvas = document.getElementById('marketingOverview');
+  new Chart(marketingOverviewCanvas, {
+    type: 'bar',
+    data: {
+    labels: ["Colaborador 1", "Colaborador 2", "Colaborador 3", "Colaborador 4", "Colaborador 5", "Colaborador 6"],
+      datasets: [{
+        label: 'Distribuição de Esforço',
+        data: [16, 52, 18, 24, 10, 25],
+        backgroundColor: "#C0C0C0", // cinza claro
+        borderWidth: 0,
+        barPercentage: 0.5,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y', // deixa horizontal
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          border: {
+            display: false
+          },
+          grid: {
+            display: true,
+            color:"#F0F0F0",
+          },
+          ticks: {
+            beginAtZero: true,
+            callback: function(value) {
+              return value + '%'; // mostra % no eixo
             },
-            x: {
-              border: {
-                display: false
-              },
-              stacked: true,
-              grid: {
-                display: false,
-                drawTicks: false,
-              },
-              ticks: {
-                beginAtZero: false,
-                autoSkip: true,
-                maxTicksLimit: 7,
-                color:"#6B778C",
-                font: {
-                  size: 10,
-                }
-              }
+            color:"#6B778C",
+            font: {
+              size: 10,
             }
           },
-          plugins: {
-            legend: {
-                display: false,
+          max: 40 // ajusta limite do eixo X
+        },
+        y: {
+          border: {
+            display: false
+          },
+          grid: {
+            display: false,
+          },
+          ticks: {
+            color:"#6B778C",
+            font: {
+              size: 12,
+              weight: 'bold'
             }
           }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false // remove legenda
         },
-        plugins: [{
-          afterDatasetUpdate: function (chart, args, options) {
-              const chartId = chart.canvas.id;
-              var i;
-              const legendId = `${chartId}-legend`;
-              const ul = document.createElement('ul');
-              for(i=0;i<chart.data.datasets.length; i++) {
-                  ul.innerHTML += `
-                  <li>
-                    <span style="background-color: ${chart.data.datasets[i].borderColor}"></span>
-                    ${chart.data.datasets[i].label}
-                  </li>
-                `;
-              }
-              return document.getElementById(legendId).appendChild(ul);
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return context.raw + '%'; // mostra % no tooltip
             }
-        }]
-      });
+          }
+        }
+      }
     }
+  });
+}
+
 
     if ($('#totalVisitors').length) {
       var bar = new ProgressBar.Circle(totalVisitors, {

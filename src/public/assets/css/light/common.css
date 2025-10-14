@@ -21446,7 +21446,7 @@ code {
 .footer {
   background: #F4F5F7;
   color: color(dark);
-  padding: 30px 2.45rem;
+  padding: 15px 1.45rem;
   transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
@@ -22321,9 +22321,9 @@ code {
   font-size: 13px;
   line-height: 18px;
 }
-.home-tab .statistics-details {
-  margin-bottom: 20px;
-}
+/* .home-tab .statistics-details {
+  margin-bottom: 10px;
+} */
 .home-tab .statistics-details .statistics-title {
   font-style: normal;
   font-weight: 500;
@@ -22340,7 +22340,7 @@ code {
 .home-tab .statistics-details .rate-percentage {
   font-style: normal;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 15px;
   line-height: 36px;
   color: #000000;
   margin-bottom: 0;
@@ -24951,7 +24951,7 @@ svg {
   background: transparent;
 }
 .card .card-body {
-  padding: 1.5rem 1.5rem;
+  padding: 1.3rem 1.3rem;
 }
 .card .card-body + .card-body {
   padding-top: 1rem;
@@ -27446,7 +27446,7 @@ dl li {
   color: #1F3BB3;
 }
 .home-tab .tab-content {
-  padding: 24px 0;
+  padding: 14px 0;
   font-family: "Manrope", sans-serif;
   border: none;
 }
