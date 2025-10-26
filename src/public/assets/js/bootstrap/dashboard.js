@@ -177,77 +177,77 @@
       });
     }
 
-if ($("#marketingOverview").length) { 
-  const marketingOverviewCanvas = document.getElementById('marketingOverview');
-  new Chart(marketingOverviewCanvas, {
-    type: 'bar',
-    data: {
-    labels: ["Colaborador 1", "Colaborador 2", "Colaborador 3", "Colaborador 4", "Colaborador 5", "Colaborador 6"],
-      datasets: [{
-        label: 'Distribuição de Esforço',
-        data: [16, 52, 18, 24, 10, 25],
-        backgroundColor: "#C0C0C0", // cinza claro
-        borderWidth: 0,
-        barPercentage: 0.5,
-        borderRadius: 4
-      }]
-    },
-    options: {
-      indexAxis: 'y', // deixa horizontal
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: {
-          border: {
-            display: false
-          },
-          grid: {
-            display: true,
-            color:"#F0F0F0",
-          },
-          ticks: {
-            beginAtZero: true,
-            callback: function(value) {
-              return value + '%'; // mostra % no eixo
-            },
-            color:"#6B778C",
-            font: {
-              size: 10,
-            }
-          },
-          max: 40 // ajusta limite do eixo X
-        },
-        y: {
-          border: {
-            display: false
-          },
-          grid: {
-            display: false,
-          },
-          ticks: {
-            color:"#6B778C",
-            font: {
-              size: 12,
-              weight: 'bold'
-            }
-          }
-        }
-      },
-      plugins: {
-        legend: {
-          display: false // remove legenda
-        },
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              return context.raw + '%'; // mostra % no tooltip
-            }
-          }
-        }
-      }
-    }
-  });
-}
+// if ($("#marketingOverview").length) { 
+//   const marketingOverviewCanvas = document.getElementById('marketingOverview');
+//   new Chart(marketingOverviewCanvas, {
+//     type: 'bar',
+//     data: {
+//     labels: ["Colaborador 1", "Colaborador 2", "Colaborador 3", "Colaborador 4", "Colaborador 5", "Colaborador 6"],
+//       datasets: [{
+//         label: 'Distribuição de Esforço',
+//         data: [16, 52, 18, 24, 10, 25],
+//         backgroundColor: "#C0C0C0", // cinza claro
+//         borderWidth: 0,
+//         barPercentage: 0.5,
+//         borderRadius: 4
+//       }]
+//     },
+//     options: {
+//       indexAxis: 'y', // deixa horizontal
+//       responsive: true,
+//       maintainAspectRatio: false,
+//       scales: {
+//         x: {
+//           border: {
+//             display: false
+//           },
+//           grid: {
+//             display: true,
+//             color:"#F0F0F0",
+//           },
+//           ticks: {
+//             beginAtZero: true,
+//             callback: function(value) {
+//               return value + '%'; // mostra % no eixo
+//             },
+//             color:"#6B778C",
+//             font: {
+//               size: 10,
+//             }
+//           },
+//           max: 40 // ajusta limite do eixo X
+//         },
+//         y: {
+//           border: {
+//             display: false
+//           },
+//           grid: {
+//             display: false,
+//           },
+//           ticks: {
+//             color:"#6B778C",
+//             font: {
+//               size: 12,
+//               weight: 'bold'
+//             }
+//           }
+//         }
+//       },
+//       plugins: {
+//         legend: {
+//           display: false // remove legenda
+//         },
+//         tooltip: {
+//           callbacks: {
+//             label: function(context) {
+//               return context.raw + '%'; // mostra % no tooltip
+//             }
+//           }
+//         }
+//       }
+//     }
+//   });
+// }
 
 
     if ($('#totalVisitors').length) {
