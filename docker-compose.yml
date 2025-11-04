@@ -1,0 +1,8 @@
+
+services:
+  frontend:
+    build: .
+    container_name: timesync_frontend
+    ports:
+      - "80:80"
+    env_file: .env
