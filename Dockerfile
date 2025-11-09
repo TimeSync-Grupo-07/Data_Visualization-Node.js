@@ -1,17 +1,10 @@
-FROM nginx:alpine
+FROM node:20-alpine
+WORKDIR /usr/src/app
 
-# Instala envsubst (para substituir variáveis no template)
-RUN apk add --no-cache gettext
+COPY package*.json ./
+RUN npm install --production
 
-# Copia arquivos do site
-COPY /src/public /usr/share/nginx/html
+COPY . .
 
-# Copia o template para o diretório correto do nginx
-COPY nginx/nginx.conf.template /etc/nginx/templates/default.conf.template
-
-# Copia e ajusta permissões do entrypoint
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-# Define o entrypoint
-ENTRYPOINT ["/entrypoint.sh"]
+EXPOSE 3000
+CMD ["node", "server.js"]
