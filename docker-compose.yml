@@ -2,7 +2,6 @@ services:
   frontend1:
     build: .
     container_name: frontend1
-    env_file: .env
     environment:
       - PORT=3001
     expose:
@@ -12,7 +11,6 @@ services:
   frontend2:
     build: .
     container_name: frontend2
-    env_file: .env
     environment:
       - PORT=3002
     expose:
