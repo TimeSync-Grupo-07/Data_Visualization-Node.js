@@ -20,7 +20,19 @@ app.get("/env.js", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "app", "index.html"));
+  res.sendFile(path.join(__dirname, "app", "projetos.html"));
+});
+
+app.get("/projetos", (req, res) => {
+  res.sendFile(path.join(__dirname, "app", "projetos.html"));
+});
+
+app.get("/equipes", (req, res) => {
+  res.sendFile(path.join(__dirname, "app", "equipes.html"));
+});
+
+app.get("/colaboradores", (req, res) => {
+  res.sendFile(path.join(__dirname, "app", "colaboradores.html"));
 });
 
 app.listen(PORT, "0.0.0.0", () => {
