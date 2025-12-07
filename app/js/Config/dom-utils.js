@@ -25,4 +25,10 @@ export class DOMUtils {
             button.addEventListener('click', callback);
         }
     }
+
+    static getInputValue(inputId) {
+        const input = document.getElementById(inputId);
+        return input ? input.value : '';
+    }
+
 }
