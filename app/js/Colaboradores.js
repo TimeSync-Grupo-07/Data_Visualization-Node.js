@@ -82,7 +82,7 @@ class PaginaColaboradores {
             a.setAttribute('role', 'tab');
             a.setAttribute('aria-controls', 'overview');
             a.setAttribute('aria-selected', 'true');
-            a.textContent = colaborador.nomeUsuario;
+            a.textContent = colaborador.nomeCompletoUsuario;
             a.setAttribute('data-id', `${colaborador.matricula}`);
             li.appendChild(a);
             container.appendChild(li);
