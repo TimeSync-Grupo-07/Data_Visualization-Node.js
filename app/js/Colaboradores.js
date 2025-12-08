@@ -31,7 +31,6 @@ class PaginaColaboradores {
         try {
             const colaboradores = await loginService.listarUsuarios();
             
-            colaboradores[0].matricula
             this.carregarInfo(colaboradores[0].matricula);
 
             this.renderizarColaboradores(colaboradores);
