@@ -48,7 +48,7 @@ class PaginaColaboradores {
             
             const dadosColaborador = await indicadoresJornadaService.buscarPorColaborador(matricula);
             
-            this.renderizarProjetosColaborador(dadosColaborador.projetos);
+            this.renderizarProjetosColaborador(dadosColaborador);
 
             const infoCalculo = await informacoesCalculoService.buscarPorColaborador(matricula);
 
@@ -139,7 +139,7 @@ class PaginaColaboradores {
 
             const h3ValorHora = document.createElement('h3');
             h3ValorHora.classList.add('rate-percentage');
-            h3ValorHora.textContent = `R$ ${infoCalculo.valorPorHora.toFixed(2)}`;
+            h3ValorHora.textContent = `R$ ${infoCalculo.valorHoraColaborador.toFixed(2)}`;
             divValorHora.appendChild(h3ValorHora);
 
             const divHorasTotais = document.createElement('div');
@@ -150,7 +150,7 @@ class PaginaColaboradores {
 
             const h3HorasTotais = document.createElement('h3');
             h3HorasTotais.classList.add('rate-percentage');
-            h3HorasTotais.textContent = `${infoCalculo.horasTotais} Horas`;
+            h3HorasTotais.textContent = `${infoCalculo.horasPlanejadasTotais} Horas`;
             divHorasTotais.appendChild(h3HorasTotais);
 
             const divHorasApontadas = document.createElement('div');
@@ -161,7 +161,7 @@ class PaginaColaboradores {
 
             const h3HorasApontadas = document.createElement('h3');
             h3HorasApontadas.classList.add('rate-percentage');
-            h3HorasApontadas.textContent = `${infoCalculo.horasApontadas} Horas`;
+            h3HorasApontadas.textContent = `${infoCalculo.horasApontadasTotais} Horas`;
             divHorasApontadas.appendChild(h3HorasApontadas);
 
             container.appendChild(divValorHora);
