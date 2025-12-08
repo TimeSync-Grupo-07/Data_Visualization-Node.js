@@ -15,11 +15,11 @@ class PaginaColaboradores {
 
     registrarEventos() {
         
-        const tabs = document.querySelectorAll('.nav-link[data-id]');
+        const tabs = document.querySelectorAll('.nav-link[id]');
 
         tabs.forEach(tab => {
             tab.addEventListener('click', (event) => {
-                const id = event.target.getAttribute('data-id');
+                const id = event.target.getAttribute('id');
                 this.carregarInfo(id);
             });
         });
@@ -78,12 +78,11 @@ class PaginaColaboradores {
             a.classList.add('ps-0');
             a.classList.add('active');
             a.setAttribute('data-bs-toggle', 'tab');
-            a.setAttribute('href', '#overview');
             a.setAttribute('role', 'tab');
             a.setAttribute('aria-controls', 'overview');
             a.setAttribute('aria-selected', 'true');
             a.textContent = colaborador.nomeCompletoUsuario;
-            a.setAttribute('data-id', `${colaborador.matricula}`);
+            a.setAttribute('id', `${colaborador.matricula}`);
             li.appendChild(a);
             container.appendChild(li);
         })
