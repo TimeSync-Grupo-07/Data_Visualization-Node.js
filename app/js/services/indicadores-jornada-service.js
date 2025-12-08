@@ -22,6 +22,15 @@ class IndicadoresJornadaService {
         }
     }
 
+    async buscarPorColaborador(idColaborador) {
+        try {
+            const response = await apiClient.get(`/IndicadoresJornada/colaborador/${idColaborador}`);
+            return response.data;
+        } catch (error) {
+            console.error('Erro buscando os dados do colaborador especifico:', error);
+            throw error;
+        }
+    }
 }
 
 export default new IndicadoresJornadaService();

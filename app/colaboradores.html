@@ -58,44 +58,35 @@
 
           <li class="nav-item">
             <div class="d-sm-flex align-items-center justify-content-center">
-              <a class="navbar-brand brand-logo">
+              <a class="navbar-brand brand-logo" href="/projetos">
                 <img img class="img-md rounded-circle" src="images/faces/face8.jpg" alt="Profile image" />
               </a>
             </div>
           </li>
-          <li class="nav-item">
-            <div class="d-sm-flex align-items-center justify-content-center">
-              <a class="nav-link" data-bs-toggle="collapse" href="index.html" aria-expanded="false"
-                aria-controls="form-elements">
-                <span class="menu-title">Fulano</span>
-              </a>
-            </div>
-          </li>
+          
+          <li class="nav-item nav-category">Páginas</li>
 
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="projetos.html" aria-expanded="false"
-              aria-controls="form-elements">
-              <i class="menu-icon mdi mdi-chart-line"></i>
-              <span class="menu-title">Projetos</span>
-            </a>
-          </li>
+<li class="nav-item">
+  <a class="nav-link" href="projetos.html">
+    <i class="menu-icon mdi mdi-chart-line"></i>
+    <span class="menu-title">Projetos</span>
+  </a>
+</li>
 
-          <li class="nav-item nav-category">Específicos</li>
 
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="colaboradores.html" aria-expanded="false"
-              aria-controls="form-elements">
-              <i class="menu-icon mdi mdi-account-circle-outline"></i>
-              <span class="menu-title">Colaboradores</span>
-            </a>
-          </li>
+<li class="nav-item">
+  <a class="nav-link" href="colaboradores.html">
+    <i class="menu-icon mdi mdi-account-circle-outline"></i>
+    <span class="menu-title">Colaboradores</span>
+  </a>
+</li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="equipes.html">
-              <i class="menu-icon mdi mdi-account-group-outline"></i>
-              <span class="menu-title">Equipes</span>
-            </a>
-          </li>
+<li class="nav-item">
+  <a class="nav-link" href="equipes.html">
+    <i class="menu-icon mdi mdi-account-group-outline"></i>
+    <span class="menu-title">Equipes</span>
+  </a>
+</li>
         </ul>
       </nav>
       <!-- partial -->
@@ -105,25 +96,25 @@
             <div class="col-sm-12">
               <div class="home-tab">
                 <div class="d-sm-flex align-items-center justify-content-between border-bottom">
-                  <ul class="nav nav-tabs" role="tablist">
+                  <ul class="nav nav-tabs" role="tablist" id="colaboradores">
                     <li class="nav-item">
-                      <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab"
+                      <a class="nav-link active ps-0" data-id="home-tab" data-bs-toggle="tab" href="#overview" role="tab"
                         aria-controls="overview" aria-selected="true">Colaborador 1</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#audiences" role="tab"
+                      <a class="nav-link" data-id="profile-tab" data-bs-toggle="tab" href="#audiences" role="tab"
                         aria-selected="false">Colaborador 2</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab"
+                      <a class="nav-link" data-id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab"
                         aria-selected="false">Colaborador 3</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab"
+                      <a class="nav-link" data-id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab"
                         aria-selected="false">Colaborador 4</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab"
+                      <a class="nav-link" data-id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab"
                         aria-selected="false">Colaborador 5</a>
                     </li>
                     <li class="nav-item">
@@ -158,7 +149,7 @@
                                       <th>Erros em <br>Apontamento</th>
                                     </tr>
                                   </thead>
-                                  <tbody>
+                                  <tbody id="tabela-projetos-colaborador">
                                     <tr>
                                       <td>Projeto 1</td>
                                       <td>53</td>
@@ -211,7 +202,7 @@
                                     Para
                                     Cálculo</h4>
                                 </div>
-                                <div class="statistics-details flex justify-content-evenly">
+                                <div class="statistics-details flex justify-content-evenly" id="informacoes-calculo">
                                   <div class="d-none d-md-block">
                                     <p class="statistics-title">R$ por Hora</p>
                                     <h3 class="rate-percentage">R$ XX,XX</h3>
@@ -280,6 +271,9 @@
   <!-- End custom js for this page-->
 
   <script src="js/bootstrap/"></script>
+
+  <script type="module" src="js/Colaboradores.js"></script>
+
 </body>
 
 </html>

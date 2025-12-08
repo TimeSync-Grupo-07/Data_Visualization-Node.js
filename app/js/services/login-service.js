@@ -17,6 +17,16 @@ class LoginService {
 
     }
 
+    async listarUsuarios() {
+        try {
+            const response = await apiClient.get('/Usuarios');
+            return response.data;
+        } catch (error) {
+            console.error('Erro buscando os usuarios:', error);
+            throw error;
+        }
+    }
+
 }
 
 export default new LoginService();
