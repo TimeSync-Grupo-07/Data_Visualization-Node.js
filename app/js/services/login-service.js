@@ -19,7 +19,13 @@ class LoginService {
 
     async listarUsuarios() {
         try {
+
+            console.log('Buscando usuarios...');
+
             const response = await apiClient.get('/Usuarios');
+
+            console.log('Usuarios recebidos:', response.data);
+            
             return response.data;
         } catch (error) {
             console.error('Erro buscando os usuarios:', error);

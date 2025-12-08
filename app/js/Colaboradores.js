@@ -31,7 +31,8 @@ class PaginaColaboradores {
         try {
             const colaboradores = await loginService.listarUsuarios();
             
-            colaboradores[0].matricula
+            console.log('Colaboradores:', colaboradores);
+
             this.carregarInfo(colaboradores[0].matricula);
 
             this.renderizarColaboradores(colaboradores);
@@ -61,6 +62,8 @@ class PaginaColaboradores {
     }
 
     async renderizarColaboradores(colaboradores){
+
+        console.log('Renderizando colaboradores:', colaboradores);
 
         const container = DOMUtils.getById('colaboradores');
         container.innerHTML = '';
