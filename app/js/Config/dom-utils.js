@@ -31,4 +31,8 @@ export class DOMUtils {
         return input ? input.value : '';
     }
 
+    static getById(id) {
+        return document.getElementById(id);
+    }
+
 }
