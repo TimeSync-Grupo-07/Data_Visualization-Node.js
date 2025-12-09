@@ -101,7 +101,7 @@
                   <div>
                     <div class="btn-wrapper">
 
-                      <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
+                      <a id="btn-exportar" href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
                     </div>
                   </div>
                 </div>
@@ -224,6 +224,50 @@
   <script src="js/bootstrap/dashboard.js"></script>
   <!-- <script src="js/Chart.roundedBarCharts.js"></script> -->
   <!-- End custom js for this page-->
+
+  <script>
+document.getElementById("btn-exportar").addEventListener("click", async function (event) {
+    event.preventDefault();
+
+    try {
+        // Chame o endpoint (ex: /extract-relatorio)
+        const response = await fetch("/extract-relatorio/", {
+            method: "GET"
+        });
+
+        if (!response.ok) {
+            throw new Error("Erro ao gerar relatório");
+        }
+
+        // Transforma a resposta em blob (arquivo)
+        const blob = await response.blob();
+
+        // Cria URL para download
+        const url = window.URL.createObjectURL(blob);
+
+        // Cria um link temporário
+        const a = document.createElement("a");
+        a.href = url;
+
+        // Nome do arquivo gerado
+        a.download = "relatorio.xlsx"; // pode ser csv, pdf, etc.
+
+        // Dispara o download
+        document.body.appendChild(a);
+        a.click();
+
+        // Limpa objetos temporários
+        a.remove();
+        window.URL.revokeObjectURL(url);
+
+    } catch (err) {
+        console.error(err);
+        alert("Falha ao baixar o relatório.");
+    }
+});
+</script>
+
+
 </body>
 
 </html>
